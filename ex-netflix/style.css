@@ -1,0 +1,343 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: arial;
+    background-color: rgb(20, 19, 19);
+
+}
+
+.container{
+    height: 100vh;
+    background-image: linear-gradient(
+       to bottom,
+       rgba(0,0,0,0.8) 0%,
+       rgba(0,0,0,0.2) 20%,
+       rgba(20,20,20,0.2) 90%,
+       rgba(20,20,20,1) 100%
+    ),
+    url(./images/netflix-banner-10.jpg);
+    background-size: cover;
+    padding: 0.26rem 0.75rem 0 0.75rem;
+}
+
+.subtitle {
+    font-size: 30px;
+    margin-top: 1px
+}
+
+.hero{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 3rem;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 8.8rem;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.menu-left,
+.menu-right{
+    display: flex;
+    color:white;
+    font-size: 19px;
+    transition: transform 500ms ease;
+}
+
+.menu-right:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.menu ul{
+    display:flex;
+    list-style: none;
+    align-items: center;
+    
+}
+
+.menu ul li{
+    padding-right: .9rem;
+    
+}
+
+.menu .user img{
+    width: 3rem;
+    margin-right: .5rem;
+}
+
+.menu .user{
+    display: flex;
+    align-items: center;
+}
+
+.menu i{
+    font-size: 35px;
+
+}
+
+.menu-right ul li{
+    padding-right: 1.5rem;
+}
+
+.menu-right ul li{
+    transition: transform 160ms ease, color 160ms ease;
+    transform-origin: center;
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-right ul li:hover{
+    transform: scale(1.12);
+    cursor: pointer;
+}
+
+.banner{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.banner .poster{
+    width: 550px;
+    transform: translateX(-30px);
+    transition: transform 160ms ease;
+}
+
+.banner .subtitle{
+    font-size: 1,25rem;
+    color: #fff;
+    line-height: 1.25;
+    padding-top: .6rem;
+}
+
+.buttons{
+    margin-top:4rem;
+}
+
+.top-filmes{
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    margin-top: 12px;
+    padding: 15px 0;
+   
+}
+
+.top-filmes img{
+    width: 60px;
+    height: auto;
+    display: block;
+   
+}
+
+.tex-filmes p{
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+   
+}
+
+
+.buttons .btn{
+    color: #fff;
+    padding: 1rem 3rem;
+    margin-right: .75rem;
+    font-weight: 600px;
+    border-radius: 0.125rem;
+    background-color: rgba(255, 255, 255, 0.308);
+    font-family: inherit;
+    font-size: 25px;
+    border: 0;
+    
+
+}
+
+.buttons .btn i{
+    margin-right: 0.9rem;
+}
+
+.category {
+    height: 270px;
+    margin-bottom: 1rem;
+}
+
+
+.category span{
+    color: #e5e5e5;
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: 600;
+}
+
+.slider{
+    margin-top: .15rem;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider .movie img{
+    max-width: 100%;
+    padding-right: 7px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.slider .movie img:hover {
+    transform: scale(1.05);
+}
+.in:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.buttons .btn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s;
+}
+
+.slider .movie{
+    width: 350px;
+    height: 200px;
+    flex: 0 0 auto;
+    position: relative; 
+}
+
+.footer{
+    margin:100px auto 0;
+    width: 80%;
+    color: #808080;
+}
+
+.footer .social i{
+    padding-right: 26px;
+    font-size: 25px;
+}
+
+.flex{
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.footer .info{
+    width: 25%;
+}
+
+.footer .info ul{
+    list-style: none;
+    display: inline;
+    font-size: 12px;
+
+}
+
+.footer .info ul li{
+    margin-top: 8px;
+}
+
+.info-banner {
+ position: absolute;
+  bottom: 15rem; 
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mute-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  transform: translateX(-20px);
+}
+
+.mute-icon:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.linha {
+  width: 4px;
+  height: 50px;
+  background-color: white;
+  margin-right: 30px;
+  transform: translateX(-27px);
+}
+
+.idade {
+  background-color: #e50914; 
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transform: translateX(12px);
+
+}
+
+.barra  {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 30px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+  position: absolute;
+  left: 8px;             
+  right: 8px;
+  bottom: 5px;      
+  height: 6px;
+  background-color: rgba(0,0,0,0.45);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: #e50914;   /* cor vermelha estilo Netflix */
+  transition: width 300ms ease;
+}
+
+
+
+
